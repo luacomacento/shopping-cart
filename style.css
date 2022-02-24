@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: rgb(246, 246, 246);
+  background-color: rgb(241, 241, 238);
 }
 
 .header {
@@ -89,17 +89,26 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 40px 0;
+  gap: 16px;
 }
 
 .item {
+  background-color: white;
   display: flex;
   flex-direction: column;
   height: auto;
-  margin: 5px;
+
+  /* margin: 5px; */
   width: 200px;
-  border: 2px solid rgb(234, 234, 233);
-  border-radius: 5px;
+  border-radius: 8px;
   box-sizing: border-box;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.item:hover {
+  box-shadow: 0 4px 6px rgba(18, 82, 31, 0.4);
 }
 
 .item .item__sku {
@@ -131,7 +140,7 @@ body {
   display: flex;
   flex-basis: 32%;
   flex-flow: column wrap;
-  background-color: rgb(241, 241, 238);
+  background-color: rgb(222, 231, 226);
   height: 100vh;
 }
 
@@ -146,6 +155,19 @@ body {
   margin-bottom: 16px;
 }
 
+.cart .cart__item {
+  line-height: 1.4rem;
+  background: white;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 16px;
+  transition: 0.2s;
+}
+
+.cart .cart__item:hover {
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
 .total-price-div {
   margin: 0 auto 16px;
   font-weight: 600;
@@ -157,4 +179,11 @@ body {
   margin: 0 auto;
   border: 2px solid rgb(5, 52, 219);
   background-color: rgb(249, 249, 246);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.empty-cart:hover {
+  background-color: rgb(5, 52, 219);
+  color: white;
 }
